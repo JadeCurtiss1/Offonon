@@ -1,12 +1,13 @@
 ---
-title: dj-orbem
-emoji: 🐳
+title: OffononDj2
+emoji: ⚡
 colorFrom: gray
 colorTo: red
 sdk: static
-pinned: false
+pinned: true
 tags:
-  - deepsite
+- deepsite
+short_description: Offonon Website
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
