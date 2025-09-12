@@ -1,0 +1,12 @@
+Act as an expert web developer.
+Your task is to perform a specific modification to the current webpage.
+Follow these instructions precisely:
+First, locate the main content section that currently displays the interactive DJ mixer.
+You must completely remove that DJ mixer.
+In its exact place, embed three separate Spotify elements. Please arrange them stacked vertically, one on top of the other, to create a list.
+The content for the three elements, ordered from top to bottom, is as follows:
+Top Element: A player for the single song at this URL: https://open.spotify.com/track/6eudGCmyUllUck7MJiboFe
+Middle Element: A player for the single song at this URL: https://open.spotify.com/track/2BKGLVolirwSRAYWL60Ugw
+Bottom Element: A player for the full playlist at this URL: https://open.spotify.com/playlist/1wKd6CS3eKuJcNfeAT9FfN
+It is crucial that you do not change any other part of the website. The header, footer, dark theme, colors, and fonts must remain exactly the same. The only modification is swapping the single DJ mixer for these three new Spotify elements.
+Proceed with the modification.
