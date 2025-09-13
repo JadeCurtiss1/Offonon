@@ -181,3 +181,20 @@ The styling of the new form fields must perfectly match the existing design of t
 The form must remain fully responsive and functional on mobile devices.
 The transition between the sets of fields should be smooth.
 Proceed with the form modification.
+In the lower section, in the "Book your session" section, erase the part that is duplicated, there are two fields that are repeated, the first one is "Tu nombre", and the second one is "Tu Email".
+In contact info replace the text shown there, with the next text for the next sections:
+
+Studio Location:
+Yautepec 2, Condesa CDMX
+
+Email Adress:
+offononstudio@gmail.com
+
+Working Hours
+Monday - Saturday: 10AM - 10PM
+Sunday: Closed
+
+
+For the direction listed "Yautepec 2, Condesa", add a google maps  section, showing the exact adrees in a window.
+Translate all the text from english to spanish.
+Translate all of the text from english to spanish.
