@@ -7,50 +7,65 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.cdnfonts.com/css/groteska');
         
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0a0a0a;
-            color: white;
+            font-family: 'Raleway', sans-serif;
+            background-color: #1A1A1A;
+            color: #F9F9F9;
             overflow-x: hidden;
         }
         
-        .hero-gradient {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Groteska', sans-serif;
+            font-weight: bold;
         }
         
-        .vinyl-spin {
-            animation: spin 20s linear infinite;
+        a {
+            color: #F9F9F9;
+            transition: color 0.3s ease;
         }
         
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        a:hover {
+            color: #FF4239;
         }
         
-        .glow-text {
-            text-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
+        .btn-primary {
+            background-color: #FF4239;
+            color: #F9F9F9;
+            border: none;
+            transition: all 0.3s ease;
         }
         
-        .btn-glow:hover {
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
+        .btn-primary:hover {
+            background-color: #e6392e;
         }
         
-        .mixer-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            background: #3b82f6;
-            border-radius: 50%;
-            cursor: pointer;
+        .btn-outline {
+            border: 1px solid #FF4239;
+            color: #FF4239;
+            transition: all 0.3s ease;
         }
-    </style>
+        
+        .btn-outline:hover {
+            background-color: #FF4239;
+            color: #F9F9F9;
+        }
+        
+        .icon-accent {
+            color: #FF4239;
+        }
+        
+        .card-bg {
+            background-color: #222222;
+        }
+</style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-black bg-opacity-80 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="fixed w-full z-50 bg-[#1A1A1A] bg-opacity-95 backdrop-blur-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
@@ -60,12 +75,12 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-4">
-                        <a href="#" class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
-                        <a href="#" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
-                        <a href="#" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Equipo</a>
-                        <a href="#" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Galería</a>
-                        <a href="#" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
-                    </div>
+                        <a href="#" class="text-[#F9F9F9] hover:text-[#FF4239] px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="#" class="text-[#F9F9F9] hover:text-[#FF4239] px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
+                        <a href="#" class="text-[#F9F9F9] hover:text-[#FF4239] px-3 py-2 rounded-md text-sm font-medium">Equipo</a>
+                        <a href="#" class="text-[#F9F9F9] hover:text-[#FF4239] px-3 py-2 rounded-md text-sm font-medium">Galería</a>
+                        <a href="#" class="text-[#F9F9F9] hover:text-[#FF4239] px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+</div>
                 </div>
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
@@ -86,22 +101,21 @@
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center pt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <section class="min-h-screen flex items-center pt-16 bg-[#1A1A1A]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6 glow-text">CREA EL <span class="text-blue-400">RITMO PERFECTO</span></h1>
-                    <p class="text-lg text-gray-300 mb-8 max-w-lg">Servicios premium de estudio DJ para artistas, productores y entusiastas de la música. Equipo de última generación e ingeniería de sonido profesional.</p>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">CREA EL <span class="text-[#FF4239]">RITMO PERFECTO</span></h1>
+                    <p class="text-lg text-[#CCCCCC] mb-8 max-w-lg">Servicios premium de estudio DJ para artistas, productores y entusiastas de la música. Equipo de última generación e ingeniería de sonido profesional.</p>
                     <div class="flex space-x-4">
-                        <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition duration-300 btn-glow">
+                        <button class="btn-primary px-6 py-3 rounded-full font-medium">
                             Reservar Sesión
                         </button>
-                        <button class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-full font-medium transition duration-300">
+                        <button class="btn-outline px-6 py-3 rounded-full font-medium">
                             Saber Más
                         </button>
-                    </div>
+</div>
                 </div>
                 <div class="md:w-1/2 relative flex justify-center">
                     <div class="relative w-64 h-64 md:w-80 md:h-80">
@@ -116,46 +130,44 @@
             </div>
         </div>
     </section>
-
     <!-- Services Section -->
-    <section class="py-20 bg-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-20 bg-[#1A1A1A]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">NUESTROS <span class="text-blue-400">SERVICIOS</span></h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Ofrecemos servicios completos de DJ y producción musical adaptados a tus necesidades</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">NUESTROS <span class="text-[#FF4239]">SERVICIOS</span></h2>
+                <p class="text-[#CCCCCC] max-w-2xl mx-auto">Ofrecemos servicios completos de DJ y producción musical adaptados a tus necesidades</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-900 p-8 rounded-xl hover:bg-gray-800 transition duration-300">
-                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-6">
+                <div class="card-bg p-8 rounded-xl hover:bg-[#2A2A2A] transition duration-300">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6 icon-accent">
                         <i class="fas fa-music text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Mezcla DJ</h3>
-                    <p class="text-gray-400">Servicios profesionales de mezcla DJ para eventos, clubes y radio. Mezclas perfectas y transiciones fluidas.</p>
+                    <p class="text-[#CCCCCC]">Servicios profesionales de mezcla DJ para eventos, clubes y radio. Mezclas perfectas y transiciones fluidas.</p>
                 </div>
                 
-                <div class="bg-gray-900 p-8 rounded-xl hover:bg-gray-800 transition duration-300">
-                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-6">
+                <div class="card-bg p-8 rounded-xl hover:bg-[#2A2A2A] transition duration-300">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6 icon-accent">
                         <i class="fas fa-sliders-h text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Producción Musical</h3>
-                    <p class="text-gray-400">Servicios completos de producción musical desde la creación de beats hasta la masterización final. Da vida a tus ideas.</p>
+                    <p class="text-[#CCCCCC]">Servicios completos de producción musical desde la creación de beats hasta la masterización final. Da vida a tus ideas.</p>
                 </div>
                 
-                <div class="bg-gray-900 p-8 rounded-xl hover:bg-gray-800 transition duration-300">
-                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-6">
+                <div class="card-bg p-8 rounded-xl hover:bg-[#2A2A2A] transition duration-300">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6 icon-accent">
                         <i class="fas fa-headphones text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Ingeniería de Sonido</h3>
-                    <p class="text-gray-400">Ingeniería de sonido profesional para grabaciones, presentaciones en vivo y postproducción.</p>
-                </div>
+                    <p class="text-[#CCCCCC]">Ingeniería de sonido profesional para grabaciones, presentaciones en vivo y postproducción.</p>
+</div>
             </div>
         </div>
     </section>
-
     <!-- Equipment Section -->
-    <section class="py-20 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-20 bg-[#1A1A1A]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
                     <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
@@ -163,57 +175,55 @@
                          class="rounded-xl shadow-2xl w-full">
                 </div>
                 <div class="md:w-1/2 md:pl-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">EQUIPO DE <span class="text-blue-400">PRIMERA</span></h2>
-                    <p class="text-gray-400 mb-8">Nuestro estudio está equipado con equipo estándar de la industria para garantizar la más alta calidad de producción:</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">EQUIPO DE <span class="text-[#FF4239]">PRIMERA</span></h2>
+                    <p class="text-[#CCCCCC] mb-8">Nuestro estudio está equipado con equipo estándar de la industria para garantizar la más alta calidad de producción:</p>
                     
                     <div class="space-y-4">
                         <div class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <i class="fas fa-check-circle text-[#FF4239] mt-1 mr-3"></i>
                             <div>
                                 <h4 class="font-medium">Mezclador Pioneer DJM-900NXS2</h4>
-                                <p class="text-gray-400 text-sm">Mezclador profesional de 4 canales con efectos premium</p>
+                                <p class="text-[#CCCCCC] text-sm">Mezclador profesional de 4 canales con efectos premium</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <i class="fas fa-check-circle text-[#FF4239] mt-1 mr-3"></i>
                             <div>
                                 <h4 class="font-medium">Tornamesas Technics SL-1200MK7</h4>
-                                <p class="text-gray-400 text-sm">Legendarias tornamesas de transmisión directa para control preciso</p>
+                                <p class="text-[#CCCCCC] text-sm">Legendarias tornamesas de transmisión directa para control preciso</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <i class="fas fa-check-circle text-[#FF4239] mt-1 mr-3"></i>
                             <div>
                                 <h4 class="font-medium">Native Instruments Komplete Kontrol</h4>
-                                <p class="text-gray-400 text-sm">Suite completa de producción musical con controladores MIDI</p>
+                                <p class="text-[#CCCCCC] text-sm">Suite completa de producción musical con controladores MIDI</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <i class="fas fa-check-circle text-[#FF4239] mt-1 mr-3"></i>
                             <div>
                                 <h4 class="font-medium">Monitores de Estudio Adam Audio T7V</h4>
-                                <p class="text-gray-400 text-sm">Monitores de referencia profesionales para mezclas precisas</p>
+                                <p class="text-[#CCCCCC] text-sm">Monitores de referencia profesionales para mezclas precisas</p>
                             </div>
                         </div>
                     </div>
                     
-                    <button class="mt-8 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition duration-300">
-                        Ver Lista Completa de Equipos
+                    <button class="mt-8 btn-primary px-6 py-3 rounded-full font-medium">
+Ver Lista Completa de Equipos
                     </button>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Spotify Players -->
-    <section class="py-20 bg-black">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">NUESTRAS <span class="text-blue-400">SELECCIONES EN SPOTIFY</span></h2>
-            <p class="text-gray-400 mb-12 max-w-2xl mx-auto">Escucha algunas de nuestras canciones y listas de reproducción favoritas.</p>
-            
-            <div class="space-y-8">
-                <div class="bg-gray-900 rounded-xl p-6 shadow-2xl">
-                    <iframe src="https://open.spotify.com/embed/track/6eudGCmyUllUck7MJiboFe" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <section class="py-20 bg-[#1A1A1A]">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">NUESTRAS <span class="text-[#FF4239]">SELECCIONES EN SPOTIFY</span></h2>
+            <p class="text-[#CCCCCC] mb-12 max-w-2xl mx-auto">Escucha algunas de nuestras canciones y listas de reproducción favoritas.</p>
+<div class="space-y-8">
+                <div class="card-bg rounded-xl p-6 shadow-2xl">
+<iframe src="https://open.spotify.com/embed/track/6eudGCmyUllUck7MJiboFe" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </div>
                 
                 <div class="bg-gray-900 rounded-xl p-6 shadow-2xl">
@@ -226,14 +236,13 @@
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
-    <section class="py-20 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-20 bg-[#1A1A1A]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">RESERVA TU <span class="text-blue-400">SESIÓN</span></h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">¿Listo para crear algo increíble? Ponte en contacto con nosotros para reservar tiempo en el estudio.</p>
-            </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">RESERVA TU <span class="text-[#FF4239]">SESIÓN</span></h2>
+                <p class="text-[#CCCCCC] max-w-2xl mx-auto">¿Listo para crear algo increíble? Ponte en contacto con nosotros para reservar tiempo en el estudio.</p>
+</div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
@@ -309,58 +318,58 @@
                                 <input type="email" id="project-email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
                             </div>
                         </div>
-                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
-                            Enviar Mensaje
+                        <button type="submit" class="w-full btn-primary px-6 py-3 rounded-lg font-medium">
+Enviar Mensaje
                         </button>
                     </form>
                 </div>
                 
                 <div>
-                    <div class="bg-gray-800 p-8 rounded-xl h-full">
-                        <h3 class="text-xl font-bold mb-6">CONTACT INFO</h3>
+                    <div class="card-bg p-8 rounded-xl h-full">
+<h3 class="text-xl font-bold mb-6">CONTACT INFO</h3>
                         
                         <div class="space-y-6">
                             <div class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-4"></i>
-                                <div>
+                                <i class="fas fa-map-marker-alt text-[#FF4239] mt-1 mr-4"></i>
+<div>
                                     <h4 class="font-medium">Ubicación del Estudio</h4>
-                                    <p class="text-gray-400">Calle Juan Escutia 80, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX</p>
-                                    <div class="mt-4">
+                                    <p class="text-[#CCCCCC]">Calle Juan Escutia 80, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX</p>
+<div class="mt-4">
                                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.9318935617907!2d-99.1769013!3d19.4171053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff3d5c5f1e43%3A0xd9c88f0e85b367b8!2sCalle%20Juan%20Escutia%2080%2C%20Colonia%20Condesa%2C%20Cuauht%C3%A9moc%2C%2006140%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1710281930502!5m2!1ses-419!2smx" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
                                 </div>
                             </div>
                             
                             <div class="flex items-start">
-                                <i class="fas fa-phone-alt text-blue-500 mt-1 mr-4"></i>
-                                <div>
+                                <i class="fas fa-phone-alt text-[#FF4239] mt-1 mr-4"></i>
+<div>
                                     <h4 class="font-medium">Número de Teléfono</h4>
-                                    <p class="text-gray-400">+52 56 1284 0939</p>
+                                    <p class="text-[#CCCCCC]">+52 56 1284 0939</p>
 </div>
                             </div>
                             
                             <div class="flex items-start">
-                                <i class="fas fa-envelope text-blue-500 mt-1 mr-4"></i>
-                                <div>
+                                <i class="fas fa-envelope text-[#FF4239] mt-1 mr-4"></i>
+<div>
                                     <h4 class="font-medium">Correo Electrónico</h4>
-                                    <p class="text-gray-400">offononstudio@gmail.com</p>
-                                </div>
+                                    <p class="text-[#CCCCCC]">offononstudio@gmail.com</p>
+</div>
                             </div>
                             
                             <div class="flex items-start">
-                                <i class="fas fa-clock text-blue-500 mt-1 mr-4"></i>
-                                <div>
+                                <i class="fas fa-clock text-[#FF4239] mt-1 mr-4"></i>
+<div>
                                     <h4 class="font-medium">Horario de Trabajo</h4>
-                                    <p class="text-gray-400">Lunes - Sábado: 10AM - 10PM<br>Domingo: Cerrado</p>
-                                </div>
+                                    <p class="text-[#CCCCCC]">Lunes - Sábado: 10AM - 10PM<br>Domingo: Cerrado</p>
+</div>
                             </div>
                         </div>
                         
                         <div class="mt-8">
                             <h4 class="font-medium mb-4">SÍGUENOS</h4>
                             <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300">
-                                    <i class="fab fa-facebook-f"></i>
+                                <a href="#" class="w-10 h-10 bg-[#222222] rounded-full flex items-center justify-center hover:bg-[#FF4239] transition duration-300">
+<i class="fab fa-facebook-f"></i>
                                 </a>
                                 <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300">
                                     <i class="fab fa-instagram"></i>
@@ -378,26 +387,24 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
-    <footer class="bg-black py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer class="bg-[#1A1A1A] py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center mb-6 md:mb-0">
                     <img src="https://huggingface.co/spaces/Gengar888/OffononDj2-Casi-listo/resolve/main/images/1000132086.png" alt="OFFONON Studio Logo" class="h-10 mr-2">
                     <span class="text-xl font-bold text-white">OFFONON Studio</span>
                 </div>
 <div class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
-                    <a href="#" class="text-gray-400 hover:text-white">Inicio</a>
-                    <a href="#" class="text-gray-400 hover:text-white">Servicios</a>
-                    <a href="#" class="text-gray-400 hover:text-white">Equipo</a>
-                    <a href="#" class="text-gray-400 hover:text-white">Galería</a>
-                    <a href="#" class="text-gray-400 hover:text-white">Contacto</a>
-                    <a href="#" class="text-gray-400 hover:text-white">Política de Privacidad</a>
-                </div>
-                
-                <div class="text-gray-400 text-sm">
-                    &copy; 2023 OFFONON Studio DJ. Todos los derechos reservados.
+                    <a href="#" class="text-[#CCCCCC] hover:text-[#FF4239]">Inicio</a>
+                    <a href="#" class="text-[#CCCCCC] hover:text-[#FF4239]">Servicios</a>
+                    <a href="#" class="text-[#CCCCCC] hover:text-[#FF4239]">Equipo</a>
+                    <a href="#" class="text-[#CCCCCC] hover:text-[#FF4239]">Galería</a>
+                    <a href="#" class="text-[#CCCCCC] hover:text-[#FF4239]">Contacto</a>
+                    <a href="#" class="text-[#CCCCCC] hover:text-[#FF4239]">Política de Privacidad</a>
+</div>
+                <div class="text-[#CCCCCC] text-sm">
+&copy; 2023 OFFONON Studio DJ. Todos los derechos reservados.
                 </div>
             </div>
         </div>
@@ -414,7 +421,7 @@
             flex-direction: column;
             gap: 20px;
             padding: 15px 10px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(26, 26, 26, 0.9);
             border-radius: 10px 0 0 10px;
             z-index: 100;
             transform: translateX(100%);
@@ -422,15 +429,15 @@
         }
 
         .social-icon {
-            color: white;
+            color: #F9F9F9;
             font-size: 24px;
             transition: all 0.3s ease;
         }
 
         .social-icon:hover {
             transform: scale(1.2);
-            color: #3b82f6;
-        }
+            color: #FF4239;
+}
 
         @keyframes slideIn {
             to { transform: translateX(0) translateY(-50%); }
