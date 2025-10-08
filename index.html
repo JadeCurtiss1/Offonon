@@ -3,21 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OFFONON Studio DJ | Premium Music Experience</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>OFFONON STUDIO | Producción Musical y Estudio de Grabación Profesional</title>
+    <meta name="description" content="Estudio profesional de producción, mezcla y masterización. Equipo de alta gama y sonido de primer nivel para artistas y productores. ¡Reserva tu sesión hoy!">
+<script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
         @import url('https://fonts.cdnfonts.com/css/groteska');
         
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+            z-index: 9999;
+            transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease;
+        }
+        
+        .cursor-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            background-color: #FF4239;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.2s ease;
+        }
+        
+        .cursor.hover {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+        
+        .cursor.hover .cursor-dot {
+            transform: translate(-50%, -50%) scale(1);
+        }
         body {
             font-family: 'Raleway', sans-serif;
             background-color: #1A1A1A;
             color: #F9F9F9;
             overflow-x: hidden;
+            cursor: none;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
             font-family: 'Groteska', sans-serif;
             font-weight: bold;
         }
@@ -101,12 +135,17 @@
             </div>
         </div>
     </nav>
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-16 bg-[#1A1A1A]">
+    <section class="min-h-screen flex items-center pt-16 bg-[#1A1A1A] hero-section">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6">CREA EL <span class="text-[#FF4239]">RITMO PERFECTO</span></h1>
+                <div class="md:w-1/2 mb-10 md:mb-0 hero-content">
+<h1 class="text-4xl md:text-6xl font-bold mb-6">CREA EL <span class="text-[#FF4239]">RITMO PERFECTO</span></h1>
                     <p class="text-lg text-[#CCCCCC] mb-8 max-w-lg">Servicios premium de estudio DJ para artistas, productores y entusiastas de la música. Equipo de última generación e ingeniería de sonido profesional.</p>
                     <div class="flex space-x-4">
                         <button class="btn-primary px-6 py-3 rounded-full font-medium">
@@ -117,10 +156,11 @@
                         </button>
 </div>
                 </div>
-                <div class="md:w-1/2 relative flex justify-center">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80">
-                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                             alt="DJ Mixer" 
+                <div class="md:w-1/2 relative flex justify-center hero-image">
+<div class="relative w-64 h-64 md:w-80 md:h-80">
+<img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+     loading="lazy" 
+alt="DJ Mixer" 
                              class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-2xl z-10">
 </div>
                 </div>
@@ -128,16 +168,15 @@
         </div>
     </section>
     <!-- Services Section -->
-    <section class="py-20 bg-[#1A1A1A]">
+    <section class="py-20 bg-[#1A1A1A] services-section">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">NUESTROS <span class="text-[#FF4239]">SERVICIOS</span></h2>
                 <p class="text-[#CCCCCC] max-w-2xl mx-auto">Ofrecemos servicios completos de DJ y producción musical adaptados a tus necesidades</p>
             </div>
-            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card-bg p-8 rounded-xl hover:bg-[#2A2A2A] transition duration-300">
-                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6 icon-accent">
+                <div class="card-bg p-8 rounded-xl hover:bg-[#2A2A2A] transition duration-300 service-card">
+<div class="w-16 h-16 rounded-full flex items-center justify-center mb-6 icon-accent">
                         <i class="fas fa-music text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Mezcla DJ</h3>
@@ -163,21 +202,21 @@
         </div>
     </section>
     <!-- Equipment Section -->
-    <section class="py-20 bg-[#1A1A1A]">
+    <section class="py-20 bg-[#1A1A1A] equipment-section">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
-                    <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                         alt="DJ Equipment" 
+<img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+     loading="lazy" 
+alt="DJ Equipment" 
                          class="rounded-xl shadow-2xl w-full">
                 </div>
                 <div class="md:w-1/2 md:pl-12">
                     <h2 class="text-3xl md:text-4xl font-bold mb-6">EQUIPO DE <span class="text-[#FF4239]">PRIMERA</span></h2>
                     <p class="text-[#CCCCCC] mb-8">Nuestro estudio está equipado con equipo estándar de la industria para garantizar la más alta calidad de producción:</p>
-                    
                     <div class="space-y-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-[#FF4239] mt-1 mr-3"></i>
+                        <div class="flex items-start equipment-item">
+<i class="fas fa-check-circle text-[#FF4239] mt-1 mr-3"></i>
                             <div>
                                 <h4 class="font-medium">Mezclador Pioneer DJM-900NXS2</h4>
                                 <p class="text-[#CCCCCC] text-sm">Mezclador profesional de 4 canales con efectos premium</p>
@@ -214,12 +253,12 @@ Ver Lista Completa de Equipos
         </div>
     </section>
     <!-- Spotify Players -->
-    <section class="py-20 bg-[#1A1A1A]">
+    <section class="py-20 bg-[#1A1A1A] spotify-section">
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">NUESTRAS <span class="text-[#FF4239]">SELECCIONES EN SPOTIFY</span></h2>
             <p class="text-[#CCCCCC] mb-12 max-w-2xl mx-auto">Escucha algunas de nuestras canciones y listas de reproducción favoritas.</p>
 <div class="space-y-8">
-                <div class="card-bg rounded-xl p-6 shadow-2xl">
+                <div class="card-bg rounded-xl p-6 shadow-2xl spotify-item">
 <iframe src="https://open.spotify.com/embed/track/6eudGCmyUllUck7MJiboFe" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </div>
                 
@@ -234,7 +273,7 @@ Ver Lista Completa de Equipos
         </div>
     </section>
     <!-- Contact Section -->
-    <section class="py-20 bg-[#1A1A1A]">
+    <section class="py-20 bg-[#1A1A1A] contact-section">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">RESERVA TU <span class="text-[#FF4239]">SESIÓN</span></h2>
@@ -243,8 +282,13 @@ Ver Lista Completa de Equipos
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
-                    <form class="space-y-6">
-                        <div>
+                    <form class="space-y-6 contact-form" id="contactForm">
+                        <div id="form-success" class="hidden text-center py-10">
+                            <h3 class="text-2xl font-bold text-[#FF4239] mb-4">¡Gracias por tu mensaje!</h3>
+                            <p class="text-white">Nos pondremos en contacto contigo pronto.</p>
+                        </div>
+                        <div id="form-fields">
+<div>
                             <label for="service" class="block text-sm font-medium text-gray-300 mb-1">Servicio Necesitado</label>
                             <select id="service" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white">
                                 <option>DJ Mixing</option>
@@ -315,7 +359,7 @@ Ver Lista Completa de Equipos
                                 <input type="email" id="project-email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
                             </div>
                         </div>
-                        <button type="submit" class="w-full btn-primary px-6 py-3 rounded-lg font-medium">
+                        <button type="submit" class="w-full btn-primary px-6 py-3 rounded-lg font-medium" id="submit-btn">
 Enviar Mensaje
                         </button>
                     </form>
@@ -408,10 +452,22 @@ Enviar Mensaje
     </footer>
 
     <style>
+        /* Scroll Reveal Animations */
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        section.reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Social Media Sidebar */
         .social-sidebar {
             position: fixed;
-            right: 0;
+            right: -50px;
             top: 50%;
             transform: translateY(-50%);
             display: flex;
@@ -421,26 +477,149 @@ Enviar Mensaje
             background: rgba(26, 26, 26, 0.9);
             border-radius: 10px 0 0 10px;
             z-index: 100;
-            transform: translateX(100%);
-            animation: slideIn 0.5s forwards 0.5s;
+            transition: right 0.5s ease 1s;
+        }
+
+        .social-sidebar.visible {
+            right: 0;
         }
 
         .social-icon {
             color: #F9F9F9;
             font-size: 24px;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
         }
 
         .social-icon:hover {
             transform: scale(1.2);
             color: #FF4239;
-}
-
-        @keyframes slideIn {
-            to { transform: translateX(0) translateY(-50%); }
         }
 
-        /* Dynamic Form Fields */
+        /* Hero Animation */
+        .hero-content h1 {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .hero-content p, .hero-content .buttons {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+        }
+
+        .hero-image {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .hero-animated .hero-content h1,
+        .hero-animated .hero-content p,
+        .hero-animated .hero-content .buttons {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-animated .hero-image {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Services Animation */
+        .service-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .services-reveal .service-card:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+        .services-reveal .service-card:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+        .services-reveal .service-card:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .services-reveal .service-card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Equipment Animation */
+        .equipment-item {
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .equipment-reveal .equipment-item {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .equipment-reveal .equipment-item:nth-child(1) { transition-delay: 0.1s; }
+        .equipment-reveal .equipment-item:nth-child(2) { transition-delay: 0.2s; }
+        .equipment-reveal .equipment-item:nth-child(3) { transition-delay: 0.3s; }
+        .equipment-reveal .equipment-item:nth-child(4) { transition-delay: 0.4s; }
+
+        /* Spotify Animation */
+        .spotify-header {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .spotify-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .spotify-reveal .spotify-header {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .spotify-reveal .spotify-item:nth-child(1) { transition-delay: 0.2s; }
+        .spotify-reveal .spotify-item:nth-child(2) { transition-delay: 0.3s; }
+        .spotify-reveal .spotify-item:nth-child(3) { transition-delay: 0.4s; }
+
+        .spotify-reveal .spotify-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Contact Animation */
+        .contact-form {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .contact-info {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .contact-reveal .contact-form,
+        .contact-reveal .contact-info {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Global Hover Effects */
+        a, button, .btn-primary, .btn-outline, .social-icon {
+            transition: all 0.2s ease;
+        }
+
+        a:hover, button:hover, .btn-primary:hover, .btn-outline:hover {
+            filter: drop-shadow(0 0 5px rgba(255, 66, 57, 0.7));
+        }
+/* Dynamic Form Fields */
         .dynamic-field {
             display: none;
             opacity: 0;
@@ -462,7 +641,6 @@ Enviar Mensaje
         <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="social-icon"><i class="fab fa-spotify"></i></a>
     </div>
-
     <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -489,7 +667,71 @@ Enviar Mensaje
             }
         }
 
-        // Initialize with first option
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorDot = document.querySelector('.cursor-dot');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, button, .btn-primary, .btn-outline, input[type="submit"], .social-icon').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+            });
+            element.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+        });
+
+        // Scroll Reveal Animations
+        function checkScroll() {
+            const sections = document.querySelectorAll('section');
+            const windowHeight = window.innerHeight;
+            const windowTop = window.scrollY;
+            const windowBottom = windowTop + windowHeight;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (sectionBottom >= windowTop && sectionTop <= windowBottom) {
+                    section.classList.add('reveal');
+
+                    // Section-specific animations
+                    if (section.classList.contains('hero-section')) {
+                        section.classList.add('hero-animated');
+                    } else if (section.classList.contains('services-section')) {
+                        section.classList.add('services-reveal');
+                    } else if (section.classList.contains('equipment-section')) {
+                        section.classList.add('equipment-reveal');
+                    } else if (section.classList.contains('spotify-section')) {
+                        section.classList.add('spotify-reveal');
+                    } else if (section.classList.contains('contact-section')) {
+                        section.classList.add('contact-reveal');
+                    }
+                }
+            });
+        }
+
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            document.getElementById('form-fields').style.display = 'none';
+            document.getElementById('form-success').classList.remove('hidden');
+            
+            // Reset form after 5 seconds
+            setTimeout(() => {
+                document.getElementById('form-fields').style.display = 'block';
+                document.getElementById('form-success').classList.add('hidden');
+                this.reset();
+            }, 5000);
+        });
+
+        // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             showFields(document.getElementById('service').value);
             
@@ -497,7 +739,44 @@ Enviar Mensaje
             document.querySelectorAll('.dynamic-field').forEach(field => {
                 field.style.transition = 'opacity 0.3s ease, height 0.3s ease';
             });
+
+            // Show social sidebar after delay
+            setTimeout(() => {
+                document.querySelector('.social-sidebar').classList.add('visible');
+            }, 1000);
+
+            // Initial scroll check
+            checkScroll();
         });
+
+        // Check scroll on scroll
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('resize', checkScroll);
+
+        // Lazy loading for images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.loading = 'lazy';
+            });
+        } else {
+            // Fallback for browsers that don't support loading="lazy"
+            const lazyLoad = function() {
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                
+                lazyImages.forEach(img => {
+                    if (img.getBoundingClientRect().top < window.innerHeight + 200) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('loading');
+                    }
+                });
+            };
+
+            document.addEventListener('scroll', lazyLoad);
+            window.addEventListener('resize', lazyLoad);
+            window.addEventListener('orientationchange', lazyLoad);
+            lazyLoad();
+        }
     </script>
 <p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Mithos9/dj-orbem" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p><p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Mithos9/OffononDj2" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
 </html>
