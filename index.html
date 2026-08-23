@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
         <div class="cursor-dot"></div>
     </div>
 
-<!-- Hero Section Monolítico Centrado con Video de Fondo -->
+<!-- Hero Section con Centrado Geométrico Absoluto y Video de Fondo -->
 <section class="relative min-h-screen flex items-center justify-center pt-16 bg-[#1A1A1A] hero-section overflow-hidden">
 
     <!-- 1. Capa de Video de Fondo -->
@@ -152,28 +152,32 @@ h1, h2, h3, h4, h5, h6 {
     <!-- 2. Velo Oscuro (Overlay) para legibilidad -->
     <div class="absolute inset-0 bg-[#1A1A1A] opacity-80 z-10 pointer-events-none"></div>
 
-    <!-- 3. Contenido Frontal (Textos y Botones Centrados y Grandes) -->
-    <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full flex flex-col items-center text-center">
+    <!-- 3. Contenedor Frontal (Bloque Geométrico Centrado) -->
+    <!-- Usamos w-full para ocupar el ancho, y flex flex-col items-center justify-center para centrar todo su contenido -->
+    <div class="relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col items-center justify-center text-center space-y-10">
         
-        <!-- Título Gigante Centrado -->
-        <h1 class="text-5xl md:text-8xl font-extrabold mb-6 text-white tracking-tight">
-            OFF<span class="text-[#FF4239]">ONON</span>
-        </h1>
-        
-        <!-- Subtítulo / Servicios Ampliado -->
-        <p class="text-xl md:text-2xl text-[#CCCCCC] mb-10 max-w-2xl tracking-wide font-light">
-            Dj / Mix & Master / Producción Musical / Foto / Video
-        </p>
+        <!-- Bloque de Texto (Agrupado para mantener el centrado) -->
+        <div class="flex flex-col items-center space-y-4">
+            <!-- Título Gigante (OFFONON) -->
+            <h1 class="text-5xl md:text-8xl font-extrabold text-white tracking-tight">
+                OFF<span class="text-[#FF4239]">ONON</span>
+            </h1>
+            
+            <!-- Subtítulo de Servicios (Alineado debajo) -->
+            <p class="text-xl md:text-2xl text-[#CCCCCC] max-w-2xl font-light tracking-wide leading-relaxed">
+                Dj / Mix & Master / Producción Musical / Foto / Video
+            </p>
+        </div>
 
-        <!-- Botones de Acción Centrados y Destacados -->
-        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 w-full justify-center">
+        <!-- Contenedor de Botones (Centrados entre sí y respecto al texto) -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full">
             <!-- Portal al Calendario (Abre en pestaña nueva) -->
             <a href="https://n9.cl/xv3zun" target="_blank" rel="noopener noreferrer" class="btn-primary px-8 py-4 rounded-full font-bold text-lg text-center inline-block transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(255,66,57,0.4)]">
                 Reservar Sesión
             </a>
             
             <!-- Portal al Instagram (Abre en pestaña nueva) -->
-            <a href="https://www.instagram.com/offononclub/" target="_blank" rel="noopener noreferrer" class="btn-outline px-8 py-4 rounded-full font-bold text-lg text-center inline-block transition-all">
+            <a href="https://www.instagram.com/offononclub/" target="_blank" rel="noopener noreferrer" class="btn-outline px-8 py-4 rounded-full font-bold text-lg text-center inline-block transition-all hover:bg-white hover:text-black">
                 Saber Más
             </a>
         </div>
