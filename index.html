@@ -140,66 +140,48 @@ h1, h2, h3, h4, h5, h6 {
         <div class="cursor-dot"></div>
     </div>
 
-    <!-- Hero Section -->
-    <!-- Hero Section Monolítico con Fondo Dinámico -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black hero-section">
-    
-    <!-- 1. El Telón Cinético (Imágenes de Fondo) -->
-    <!-- Reemplaza 'assets/foto1.jpg' con los enlaces o rutas de tus imágenes reales -->
-    <div class="absolute inset-0 z-0 pointer-events-none">
-        <div class="bg-slide absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000" style="background-image: url('assets/foto1.jpg');"></div>
-        <div class="bg-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: url('assets/foto2.jpg');"></div>
-        <div class="bg-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: url('assets/foto3.jpg');"></div>
-    </div>
+<!-- Hero Section con Video de Fondo (Carpeta Videos) -->
+<section class="relative min-h-screen flex items-center pt-16 bg-[#1A1A1A] hero-section overflow-hidden">
 
-    <!-- 2. Velo Entrópico (Overlay oscuro para legibilidad) -->
-    <!-- Ajusta la opacidad (0.75 = 75%) según qué tan brillantes sean tus fotos de fondo -->
-    <div class="absolute inset-0 bg-[#1A1A1A] opacity-75 z-10 pointer-events-none"></div>
+    <!-- 1. Capa de Video de Fondo -->
+    <video autoplay loop muted playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none">
+        <source src="videos/offonon_web1.mp4" type="video/mp4">
+        Tu navegador no soporta video de fondo.
+    </video>
 
-    <!-- 3. Singularidad de Contenido (Texto y Botones Centrados) -->
-    <div class="relative z-20 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col items-center text-center">
-        
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight">
-            OFF<span class="text-[#FF4239]">ONON</span>
-        </h1>
-        
-        <p class="text-xl md:text-2xl text-[#CCCCCC] mb-10 max-w-2xl font-light tracking-wide">
-            Dj / Mix & Master / Producción Musical / Foto / Video
-        </p>
+    <!-- 2. Velo Oscuro (Overlay) para legibilidad -->
+    <div class="absolute inset-0 bg-[#1A1A1A] opacity-80 z-10 pointer-events-none"></div>
 
-        <!-- Portales de Salto (Botones) -->
-        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 w-full justify-center">
-            <!-- Portal al Calendario -->
-            <a href="https://n9.cl/xv3zun" target="_blank" rel="noopener noreferrer" class="bg-[#FF4239] hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(255,66,57,0.4)] inline-block">
-                Reservar Sesión
-            </a>
+    <!-- 3. Contenido Frontal (Textos y Botones) -->
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+        <div class="flex flex-col items-start hero-content max-w-2xl">
             
-            <!-- Portal al Instagram -->
-            <a href="https://www.instagram.com/offononclub/" target="_blank" rel="noopener noreferrer" class="border border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 inline-block">
-                Saber Más
-            </a>
+            <!-- Título -->
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+                OFF<span class="text-[#FF4239]">ONON</span>
+            </h1>
+            
+            <!-- Subtítulo / Servicios -->
+            <p class="text-lg text-[#CCCCCC] mb-8 tracking-wide">
+                Dj / Mix & Master / Producción Musical / Foto / Video
+            </p>
+
+            <!-- Botones de Acción -->
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
+                <!-- Portal al Calendario (Abre en pestaña nueva) -->
+                <a href="https://n9.cl/xv3zun" target="_blank" rel="noopener noreferrer" class="btn-primary px-6 py-3 rounded-full font-medium text-center inline-block transition-all">
+                    Reservar Sesión
+                </a>
+                
+                <!-- Portal al Instagram (Abre en pestaña nueva) -->
+                <a href="https://www.instagram.com/offononclub/" target="_blank" rel="noopener noreferrer" class="btn-outline px-6 py-3 rounded-full font-medium text-center inline-block transition-all">
+                    Saber Más
+                </a>
+            </div>
+
         </div>
-        
     </div>
 </section>
-
-<!-- 4. Motor de Rotación (Javascript) -->
-<script>
-    const slides = document.querySelectorAll('.bg-slide');
-    let currentSlide = 0;
-
-    if (slides.length > 0) {
-        setInterval(() => {
-            slides[currentSlide].classList.remove('opacity-100');
-            slides[currentSlide].classList.add('opacity-0');
-            
-            currentSlide = (currentSlide + 1) % slides.length;
-            
-            slides[currentSlide].classList.remove('opacity-0');
-            slides[currentSlide].classList.add('opacity-100');
-        }, 5000); // El pulso: rota cada 5000 milisegundos (5 segundos)
-    }
-</script>
     <!-- Services Section -->
     <section class="py-20 bg-[#1A1A1A] services-section">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
