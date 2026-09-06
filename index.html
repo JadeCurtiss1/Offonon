@@ -297,98 +297,40 @@ Ver Lista Completa de Equipos
             </div>
         </div>
     </section>
-    <!-- Contact Section -->
-    <section class="py-20 bg-[#1A1A1A] contact-section">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">RESERVA TU <span class="text-[#FF4239]">SESIÓN</span></h2>
-                <p class="text-[#CCCCCC] max-w-2xl mx-auto">¿Listo para crear algo increíble? Ponte en contacto con nosotros para reservar tiempo en el estudio.</p>
-</div>
+<!-- Contact Section -->
+<section class="py-20 bg-[#1A1A1A] contact-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">RESERVA TU <span class="text-[#FF4239]">SESIÓN</span></h2>
+            <p class="text-[#CCCCCC] max-w-2xl mx-auto">¿Listo para crear algo increíble? Haz contacto directo con nosotros para asegurar tu espacio en el estudio.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <form class="space-y-6 contact-form" id="contactForm">
-                        <div id="form-success" class="hidden text-center py-10">
-                            <h3 class="text-2xl font-bold text-[#FF4239] mb-4">¡Gracias por tu mensaje!</h3>
-                            <p class="text-white">Nos pondremos en contacto contigo pronto.</p>
-                        </div>
-                        <div id="form-fields">
-<div>
-                            <label for="service" class="block text-sm font-medium text-gray-300 mb-1">Servicio Necesitado</label>
-                            <select id="service" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white">
-                                <option>DJ Mixing</option>
-                                <option>Music Production</option>
-                                <option>Sound Engineering</option>
-                                <option>Equipment Rental</option>
-                            </select>
-                        </div>
-                        <!-- Clases Fields -->
-                        <div id="clases-fields" class="dynamic-field">
-                            <div>
-                                <label for="modalidad" class="block text-sm font-medium text-gray-300 mb-1">Modalidad</label>
-                                <select id="modalidad" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white">
-                                    <option>Presencial</option>
-                                    <option>En Línea</option>
-                                </select>
-                            </div>
-                            <div class="mt-4">
-                                <label for="fecha-hora" class="block text-sm font-medium text-gray-300 mb-1">Elige tu Fecha y Hora</label>
-                                <input type="datetime-local" id="fecha-hora" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="clases-nombre" class="block text-sm font-medium text-gray-300 mb-1">Tu Nombre</label>
-                                <input type="text" id="clases-nombre" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="clases-email" class="block text-sm font-medium text-gray-300 mb-1">Tu Email</label>
-                                <input type="email" id="clases-email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                        </div>
-
-                        <!-- Equipment Fields -->
-                        <div id="equipment-fields" class="dynamic-field">
-                            <div>
-                                <label for="equipo" class="block text-sm font-medium text-gray-300 mb-1">¿Qué Equipo Necesitas?</label>
-                                <input type="text" id="equipo" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="fecha-renta" class="block text-sm font-medium text-gray-300 mb-1">Fecha de Renta</label>
-                                <input type="date" id="fecha-renta" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="horas" class="block text-sm font-medium text-gray-300 mb-1">Número de Horas</label>
-                                <input type="number" id="horas" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="equipment-nombre" class="block text-sm font-medium text-gray-300 mb-1">Tu Nombre</label>
-                                <input type="text" id="equipment-nombre" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="equipment-email" class="block text-sm font-medium text-gray-300 mb-1">Tu Email</label>
-                                <input type="email" id="equipment-email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                        </div>
-
-                        <!-- Project Fields (for DJ Mixing, Music Production, Sound Engineering) -->
-                        <div id="project-fields" class="dynamic-field">
-                            <div>
-                                <label for="proyecto" class="block text-sm font-medium text-gray-300 mb-1">Cuéntanos sobre tu Proyecto</label>
-                                <textarea id="proyecto" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500"></textarea>
-                            </div>
-                            <div class="mt-4">
-                                <label for="project-nombre" class="block text-sm font-medium text-gray-300 mb-1">Tu Nombre</label>
-                                <input type="text" id="project-nombre" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="project-email" class="block text-sm font-medium text-gray-300 mb-1">Tu Email</label>
-                                <input type="email" id="project-email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                        </div>
-                        <button type="submit" class="w-full btn-primary px-6 py-3 rounded-lg font-medium" id="submit-btn">
-Enviar Mensaje
-                        </button>
-                    </form>
-                </div>
+            <!-- Columna Izquierda: Portal de Invocación Directa (WhatsApp) -->
+            <div class="flex flex-col items-center justify-center py-10">
+                <a href="https://wa.me/525613161961?text=Hola,%20me%20gustaría%20más%20información" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="group relative flex flex-col items-center transition-transform duration-500 hover:scale-105 cursor-pointer no-underline">
+                    
+                    <!-- Aura de energía (Resplandor verde sutil que se activa al acercarse) -->
+                    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#25D366] rounded-full opacity-10 group-hover:opacity-30 blur-2xl transition-all duration-700"></div>
+                    
+                    <!-- El Símbolo / Botón Gigante -->
+                    <img src="images/whatsapp_boton.png" 
+                         alt="Contactar por WhatsApp" 
+                         class="relative z-10 w-64 md:w-80 object-contain drop-shadow-[0_10px_20px_rgba(37,211,102,0.2)] group-hover:drop-shadow-[0_15px_30px_rgba(37,211,102,0.5)] transition-all duration-500">
+                    
+                    <!-- Mantra de Acción -->
+                    <span class="relative z-10 mt-10 text-xl md:text-2xl font-bold text-white tracking-widest text-center group-hover:text-[#25D366] transition-colors duration-300">
+                        HAZ CLIC AQUÍ Y RESERVA TU SESIÓN
+                    </span>
+                    <span class="relative z-10 mt-3 text-sm text-gray-500 font-light tracking-[0.2em] uppercase text-center group-hover:text-gray-300 transition-colors duration-300">
+                        Inicia la Conexión Inmediata
+                    </span>
+                </a>
+            </div>
                 
                 <div>
                     <<div> 
