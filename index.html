@@ -94,6 +94,57 @@ h1, h2, h3, h4, h5, h6 {
         .card-bg {
             background-color: #222222;
         }
+
+        /* Botón Gigante de WhatsApp */
+        .whatsapp-giant-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+            max-width: 420px;
+            padding: 2.5rem 2rem;
+            background-color: #25D366;
+            color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 1.35rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 9999px;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.45);
+            transition: box-shadow 0.15s ease, transform 0.15s ease, background-color 0.15s ease;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        .whatsapp-giant-btn i {
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        .whatsapp-giant-btn:hover {
+            color: #ffffff;
+        }
+
+        /* Brillo neón verde al tocar / presionar */
+        .whatsapp-giant-btn:active,
+        .whatsapp-giant-btn.glow-active {
+            background-color: #2be374;
+            transform: scale(0.97);
+            box-shadow:
+                0 0 25px 8px #39FF14,
+                0 0 55px 18px rgba(57, 255, 20, 0.7),
+                0 0 90px 30px rgba(57, 255, 20, 0.35);
+        }
+
+        @media (hover: hover) {
+            .whatsapp-giant-btn:hover {
+                box-shadow:
+                    0 0 20px 6px #39FF14,
+                    0 0 45px 14px rgba(57, 255, 20, 0.55);
+            }
+        }
 </style>
 </head>
 <body>
@@ -306,88 +357,15 @@ Ver Lista Completa de Equipos
 </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <form class="space-y-6 contact-form" id="contactForm">
-                        <div id="form-success" class="hidden text-center py-10">
-                            <h3 class="text-2xl font-bold text-[#FF4239] mb-4">¡Gracias por tu mensaje!</h3>
-                            <p class="text-white">Nos pondremos en contacto contigo pronto.</p>
-                        </div>
-                        <div id="form-fields">
-<div>
-                            <label for="service" class="block text-sm font-medium text-gray-300 mb-1">Servicio Necesitado</label>
-                            <select id="service" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white">
-                                <option>DJ Mixing</option>
-                                <option>Music Production</option>
-                                <option>Sound Engineering</option>
-                                <option>Equipment Rental</option>
-                            </select>
-                        </div>
-                        <!-- Clases Fields -->
-                        <div id="clases-fields" class="dynamic-field">
-                            <div>
-                                <label for="modalidad" class="block text-sm font-medium text-gray-300 mb-1">Modalidad</label>
-                                <select id="modalidad" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white">
-                                    <option>Presencial</option>
-                                    <option>En Línea</option>
-                                </select>
-                            </div>
-                            <div class="mt-4">
-                                <label for="fecha-hora" class="block text-sm font-medium text-gray-300 mb-1">Elige tu Fecha y Hora</label>
-                                <input type="datetime-local" id="fecha-hora" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="clases-nombre" class="block text-sm font-medium text-gray-300 mb-1">Tu Nombre</label>
-                                <input type="text" id="clases-nombre" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="clases-email" class="block text-sm font-medium text-gray-300 mb-1">Tu Email</label>
-                                <input type="email" id="clases-email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                        </div>
-
-                        <!-- Equipment Fields -->
-                        <div id="equipment-fields" class="dynamic-field">
-                            <div>
-                                <label for="equipo" class="block text-sm font-medium text-gray-300 mb-1">¿Qué Equipo Necesitas?</label>
-                                <input type="text" id="equipo" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="fecha-renta" class="block text-sm font-medium text-gray-300 mb-1">Fecha de Renta</label>
-                                <input type="date" id="fecha-renta" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="horas" class="block text-sm font-medium text-gray-300 mb-1">Número de Horas</label>
-                                <input type="number" id="horas" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="equipment-nombre" class="block text-sm font-medium text-gray-300 mb-1">Tu Nombre</label>
-                                <input type="text" id="equipment-nombre" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="equipment-email" class="block text-sm font-medium text-gray-300 mb-1">Tu Email</label>
-                                <input type="email" id="equipment-email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                        </div>
-
-                        <!-- Project Fields (for DJ Mixing, Music Production, Sound Engineering) -->
-                        <div id="project-fields" class="dynamic-field">
-                            <div>
-                                <label for="proyecto" class="block text-sm font-medium text-gray-300 mb-1">Cuéntanos sobre tu Proyecto</label>
-                                <textarea id="proyecto" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500"></textarea>
-                            </div>
-                            <div class="mt-4">
-                                <label for="project-nombre" class="block text-sm font-medium text-gray-300 mb-1">Tu Nombre</label>
-                                <input type="text" id="project-nombre" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                            <div class="mt-4">
-                                <label for="project-email" class="block text-sm font-medium text-gray-300 mb-1">Tu Email</label>
-                                <input type="email" id="project-email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500">
-                            </div>
-                        </div>
-                        <button type="submit" class="w-full btn-primary px-6 py-3 rounded-lg font-medium" id="submit-btn">
-Enviar Mensaje
-                        </button>
-                    </form>
+                <div class="flex items-center justify-center">
+                    <a href="https://wa.me/525613161961?text=Me%20interesa%20el%20servicio"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       id="whatsapp-cta"
+                       class="whatsapp-giant-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Escríbenos por WhatsApp</span>
+                    </a>
                 </div>
                 
                 <div>
@@ -759,25 +737,45 @@ Enviar Mensaje
             });
         }
 
-        // Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simulate form submission
-            document.getElementById('form-fields').style.display = 'none';
-            document.getElementById('form-success').classList.remove('hidden');
-            
-            // Reset form after 5 seconds
-            setTimeout(() => {
-                document.getElementById('form-fields').style.display = 'block';
-                document.getElementById('form-success').classList.add('hidden');
-                this.reset();
-            }, 5000);
-        });
+        // Form Submission (protegido: el formulario fue reemplazado por el botón de WhatsApp)
+        const contactFormEl = document.getElementById('contactForm');
+        if (contactFormEl) {
+            contactFormEl.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission
+                document.getElementById('form-fields').style.display = 'none';
+                document.getElementById('form-success').classList.remove('hidden');
+                
+                // Reset form after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('form-fields').style.display = 'block';
+                    document.getElementById('form-success').classList.add('hidden');
+                    this.reset();
+                }, 5000);
+            });
+        }
+
+        // Botón gigante de WhatsApp: brillo neón extra al tocar en móvil
+        const whatsappCta = document.getElementById('whatsapp-cta');
+        if (whatsappCta) {
+            whatsappCta.addEventListener('touchstart', function() {
+                this.classList.add('glow-active');
+            }, { passive: true });
+            whatsappCta.addEventListener('touchend', function() {
+                this.classList.remove('glow-active');
+            });
+            whatsappCta.addEventListener('touchcancel', function() {
+                this.classList.remove('glow-active');
+            });
+        }
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            showFields(document.getElementById('service').value);
+            const serviceEl = document.getElementById('service');
+            if (serviceEl) {
+                showFields(serviceEl.value);
+            }
             
             // Add smooth transition effect
             document.querySelectorAll('.dynamic-field').forEach(field => {
